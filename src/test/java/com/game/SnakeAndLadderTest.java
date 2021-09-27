@@ -9,10 +9,6 @@ public class SnakeAndLadderTest {
 
     SnakeAndLadder snakeAndLadder = new SnakeAndLadder();
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
     @Test
     public void testPlayerReachedSnakePosition() {
         int currentPosition = 10;
