@@ -11,7 +11,7 @@ public class SnakeAndLadder {
     static Map<Integer,Integer> snakes = new HashMap<>();
     static Map<Integer,Integer> ladders = new HashMap<>();
 
-    SnakeAndLadder() {
+    public SnakeAndLadder() {
         snakes.put(14,7);
         snakes.put(54,34);
         snakes.put(62,18);
