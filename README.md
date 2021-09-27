@@ -1,7 +1,7 @@
 # Snake-And-Ladder-Game
  A Single Player Snake and Ladder Game
 
-#How to Play?
+# How to Play?
 - Run the code using Java
 - You will be first prompted with the following statement
      - Enter what type of dice you want to play with: 
