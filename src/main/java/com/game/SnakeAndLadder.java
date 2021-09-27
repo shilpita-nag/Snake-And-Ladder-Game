@@ -64,6 +64,7 @@ public class SnakeAndLadder {
             currentPosition = movePlayerPosition(currentPosition,diceVal);
             if(currentPosition == 100) {
                 System.out.println("Player wins the game!");
+                break;
             }
             else {
                 System.out.println("Player at position " + currentPosition + " after " + turn + " dice roll!");
