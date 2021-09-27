@@ -27,5 +27,11 @@ public class SnakeAndLadder {
         Ladders.put(51,67);
         Ladders.put(72,91);
         Ladders.put(80,99);
+    public int rollDice() {
+        Random random = new Random();
+        return random.ints(1, 7)
+                .findFirst()
+                .getAsInt();
+    }
     }
 }
