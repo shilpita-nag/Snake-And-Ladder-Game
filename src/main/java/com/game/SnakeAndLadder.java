@@ -12,7 +12,7 @@ public class SnakeAndLadder {
     static Map<Integer,Integer> ladders = new HashMap<>();
 
     SnakeAndLadder() {
-        snakes.put(17,7);
+        snakes.put(14,7);
         snakes.put(54,34);
         snakes.put(62,18);
         snakes.put(64,60);
