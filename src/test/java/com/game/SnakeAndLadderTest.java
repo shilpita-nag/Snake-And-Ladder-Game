@@ -44,6 +44,12 @@ public class SnakeAndLadderTest {
     @Test
     public void testDiceRoll() {
         int diceVal = snakeAndLadder.rollDice();
-        Assert.assertTrue(diceVal >= 0 && diceVal <= 6);
+        Assert.assertTrue(diceVal >= 1 && diceVal <= 6);
     }
-}
+
+    @Test
+    public void testCrookedDiceRoll() {
+        int diceVal = snakeAndLadder.rollCrookedDice();
+        Assert.assertTrue(diceVal >=1 && diceVal <= 6 && diceVal%2 == 0);
+    }
+ }

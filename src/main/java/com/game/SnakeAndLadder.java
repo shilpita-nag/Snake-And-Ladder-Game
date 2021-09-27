@@ -37,6 +37,14 @@ public class SnakeAndLadder {
                 .getAsInt();
     }
 
+    public int rollCrookedDice() {
+        Random random = new Random();
+        int num = random.ints(1,4)
+                .findFirst()
+                .getAsInt();
+        return num * 2;
+    }
+
     public int movePlayerPosition(int currentPosition, int diceVal) {
         int position = currentPosition + diceVal;
         if(position > 100) {
@@ -56,11 +64,12 @@ public class SnakeAndLadder {
         }
     }
 
-    public void startGame() {
-        int currentPosition = -1;
+    public void startGame(int diceType) {
+        int currentPosition = 0;
         int totalTurns = 10;
+
         for(int turn = 1;turn <= totalTurns;turn++) {
-            int diceVal = rollDice();
+            int diceVal = (diceType == 1) ? rollDice() : rollCrookedDice();
             currentPosition = movePlayerPosition(currentPosition,diceVal);
             if(currentPosition == 100) {
                 System.out.println("Player wins the game!");
