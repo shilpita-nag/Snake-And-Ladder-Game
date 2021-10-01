@@ -10,6 +10,7 @@ public class SnakeAndLadder {
 
     static Map<Integer,Integer> snakes = new HashMap<>();
     static Map<Integer,Integer> ladders = new HashMap<>();
+    static Map<Integer,GreenSnake> greenSnakes = new HashMap<>();
 
     public SnakeAndLadder() {
         snakes.put(14,7);
@@ -28,6 +29,11 @@ public class SnakeAndLadder {
         ladders.put(51,67);
         ladders.put(72,91);
         ladders.put(80,99);
+
+        GreenSnake gs1 = new GreenSnake(10,false);
+        greenSnakes.put(12,gs1);
+        GreenSnake gs2 = new GreenSnake(23,false);
+        greenSnakes.put(33,gs1);
     }
 
     public int rollDice() {
@@ -58,6 +64,10 @@ public class SnakeAndLadder {
         else if(ladders.containsKey(position)) {
             System.out.println("Player climbs a Ladder. Go to position " + ladders.get(position) + "!");
             return ladders.get(position);
+        }
+        else if(greenSnakes.containsKey(position) && greenSnakes.get(position).isVisited() == false) {
+                greenSnakes.get(position).setIsVisited(position);
+                return greenSnakes.get(position).getFinalPosition();
         }
         else {
             return position;
