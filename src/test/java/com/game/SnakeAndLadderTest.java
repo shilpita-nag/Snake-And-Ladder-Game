@@ -2,7 +2,6 @@ package test.java.com.game;
 
 import main.java.com.game.SnakeAndLadder;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class SnakeAndLadderTest {
@@ -15,6 +14,16 @@ public class SnakeAndLadderTest {
         int diceVal = 4;
         int position = snakeAndLadder.movePlayerPosition(currentPosition,diceVal);
         Assert.assertEquals(position,7);
+    }
+
+    @Test
+    public void testPlayerReachedGreenSnakePosition() {
+        int currentPosition = 10;
+        int diceVal = 2;
+        int position = snakeAndLadder.movePlayerPosition(currentPosition,diceVal);
+        Assert.assertEquals(position,10);
+        position = snakeAndLadder.movePlayerPosition(currentPosition,diceVal);
+        Assert.assertEquals(position,12);
     }
 
     @Test
